@@ -85,15 +85,17 @@ body {
 
 .main img:nth-of-type(2){
     width: 80%;
+    margin-bottom: 20px;
 }
 
 .main .img9{
     background: url("../img/9.png");
-    background-size: 100%;
-    width: 70%;
+    background-size: contain;
+    width: 207px;
+    height: 24px;
     font-weight: bolder;
-    line-height: 30px;
-    margin-left: 15%;
+    line-height: 25px;
+    margin: auto;
 }
 
 .footer{
@@ -108,10 +110,11 @@ body {
     line-height:15px;
 }
 
-.footer img{
+.footer img {
+    width: 230%;
     position: absolute;
-    bottom:-150px;
-    left:-200px;
+    bottom: -110px;
+    left: -210px;
 }
 .footer img:nth-of-type(1){
     left: -150px;
