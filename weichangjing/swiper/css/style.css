@@ -54,30 +54,35 @@ body {
     width: 34px;
     top: 128px;
     left: 50px;
+    animation:flash infinite;
 }
 
 .s1 .header img:nth-of-type(2) {
     width: 65px;
     top: 90px;
     right: 35px;
+    animation:flash infinite;
 }
 
 .s1 .header img:nth-of-type(3) {
     width: 55px;
     bottom: 185px;
     left: 25px;
+    animation:flash infinite;
 }
 
 .s1 .header img:nth-of-type(4) {
     width: 48px;
     bottom: 210px;
     right: 50px;
+    animation:flash infinite;
 }
 
 .s1 .header img:nth-of-type(5) {
     width: 70%;
     top: 160px;
     left: 15%;
+    animation: pulse infinite;
 }
 
 .s1 .main {
@@ -126,10 +131,12 @@ body {
 
 .s1 .footer img:nth-of-type(1) {
     left: 0;
+    animation:shake infinite;
 }
 
 .s1 .footer img:nth-of-type(2) {
     left: -95px;
+    animation:shake infinite;
 }
 
 .s2 {
