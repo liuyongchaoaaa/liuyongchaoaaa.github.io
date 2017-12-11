@@ -76,7 +76,7 @@ body {
     background: #fff;
 }
 
-.s1, .s2, .s3 {
+.s1, .s2, .s3, .s4 {
     background: url("../img/bj.png");
     height: 100%;
     position: relative;
@@ -175,7 +175,7 @@ body {
     animation: shake infinite;
 }
 
-.s2, .s3 {
+.s2, .s3, .s4 {
     color: #00f8ca;
 }
 
@@ -318,6 +318,7 @@ body {
     top: 25%;
     left: 22%;
 }
+
 .s3 .main span:nth-of-type(2) {
     top: 25%;
     right: 22%;
@@ -332,15 +333,18 @@ body {
     bottom: 27%;
     right: 22%;
 }
+
 .s3 .main span:nth-of-type(5) {
     bottom: 27%;
     left: 22%;
 }
+
 .s3 .main span:nth-of-type(6) {
     top: 44%;
     left: 5%;
 }
-.s3 .text p{
+
+.s3 .text p {
     width: 80%;
     font-size: 16px;
     text-align: left;
@@ -348,5 +352,5 @@ body {
     left: 12%;
     position: absolute;
     border-left: 2px solid #00f5c8;
-    padding-left:4%;
+    padding-left: 4%;
 }
