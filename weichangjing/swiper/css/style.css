@@ -20,7 +20,7 @@ body {
 
 .swiper-button-next {
     top: auto;
-    bottom: 5%;
+    bottom: 2%;
     right: auto;
     left: 50%;
     margin-left: -13.5px;
@@ -28,6 +28,42 @@ body {
 }
 
 /*自定义*/
+
+#mp3Btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 4px solid #292929;
+    text-align: center;
+    line-height: 27px;
+    cursor: pointer;
+    transform: rotateZ(0deg);
+    animation: mp3key 4s;
+    /*一直执行*/
+    animation-iteration-count: infinite;
+    /*匀速执行*/
+    animation-timing-function: linear;
+    /*默认运行动画*/
+    animation-play-state: running;
+}
+
+@keyframes mp3key {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#mp3Btn img {
+    width: 10px;
+}
 
 .swiper-container {
     width: 100%;
@@ -40,7 +76,7 @@ body {
     background: #fff;
 }
 
-.s1,.s2{
+.s1, .s2, .s3 {
     background: url("../img/bj.png");
     height: 100%;
     position: relative;
@@ -54,28 +90,28 @@ body {
     width: 34px;
     top: 128px;
     left: 50px;
-    animation:flash infinite;
+    animation: flash infinite;
 }
 
 .s1 .header img:nth-of-type(2) {
     width: 65px;
     top: 90px;
     right: 35px;
-    animation:flash infinite;
+    animation: flash infinite;
 }
 
 .s1 .header img:nth-of-type(3) {
     width: 55px;
     bottom: 185px;
     left: 25px;
-    animation:flash infinite;
+    animation: flash infinite;
 }
 
 .s1 .header img:nth-of-type(4) {
     width: 48px;
     bottom: 210px;
     right: 50px;
-    animation:flash infinite;
+    animation: flash infinite;
 }
 
 .s1 .header img:nth-of-type(5) {
@@ -131,25 +167,25 @@ body {
 
 .s1 .footer img:nth-of-type(1) {
     left: 0;
-    animation:shake infinite;
+    animation: shake infinite;
 }
 
 .s1 .footer img:nth-of-type(2) {
     left: -95px;
-    animation:shake infinite;
+    animation: shake infinite;
 }
 
-.s2 {
+.s2, .s3 {
     color: #00f8ca;
 }
 
-.s2 h2 {
+.s2 h2, .s3 h2 {
     font-size: 26px;
     position: relative;
     top: 12%;
 }
 
-.s2 small {
+.s2 small, .s3 small {
     margin-top: 10px;
     display: block;
     font-size: 14px;
@@ -157,7 +193,9 @@ body {
 }
 
 .s2 h2::before,
-.s2 h2::after {
+.s2 h2::after,
+.s3 h2::before,
+.s3 h2::after {
     content: "";
     width: 80px;
     height: 20px;
@@ -165,14 +203,14 @@ body {
     position: absolute;
 }
 
-.s2 h2::before {
+.s2 h2::before, .s3 h2::before {
     background: url(../img/14.png);
     background-size: contain;
     margin-left: -95px;
     margin-top: 10px;
 }
 
-.s2 h2::after {
+.s2 h2::after, .s3 h2::after {
     background: url(../img/13.png);
     background-size: contain;
     margin-left: 66px;
@@ -180,7 +218,7 @@ body {
     top: 0;
 }
 
-.s2 div{
+.s2 div {
     position: absolute;
     top: 25%;
     width: 80%;
@@ -190,12 +228,13 @@ body {
 
 }
 
-.s2 div img{
+.s2 div img {
     width: 100%;
     position: absolute;
     left: 0;
 }
-.s2 div p{
+
+.s2 div p {
     text-align: left;
     padding-left: 10%;
     padding-right: 10%;
@@ -203,16 +242,17 @@ body {
     line-height: 1.5em;
     margin-bottom: 10px;
 }
-.s2 div p:nth-of-type(1){
-    padding-top:20px;
+
+.s2 div p:nth-of-type(1) {
+    padding-top: 20px;
 }
 
-.s2 div span{
+.s2 div span {
     /*渐变色*/
-    background:-moz-linear-gradient(left,#00ecfc,#00fd9d);/*Mozilla*/
-    background:-webkit-gradient(linear,0 50%,100% 50%,from(#00ecfc),to(#00fd9d));/*Old gradient for webkit*/
-    background:-webkit-linear-gradient(left,#00ecfc,#00fd9d);/*new gradient for Webkit*/
-    background:-o-linear-gradient(left,#00ecfc,#00fd9d); /*Opera11*/
+    background: -moz-linear-gradient(left, #00ecfc, #00fd9d); /*Mozilla*/
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00ecfc), to(#00fd9d)); /*Old gradient for webkit*/
+    background: -webkit-linear-gradient(left, #00ecfc, #00fd9d); /*new gradient for Webkit*/
+    background: -o-linear-gradient(left, #00ecfc, #00fd9d); /*Opera11*/
     width: 120px;
     height: 25px;
     border-radius: 10px;
@@ -223,23 +263,90 @@ body {
     display: inline-block;
     position: absolute;
     bottom: -10px;
-    left:50%;
+    left: 50%;
     margin-left: -60px;
 }
+
 /*.s2 .footer {*/
-    /*width: 100%;*/
-    /*position: absolute;*/
-    /*bottom: 0;*/
+/*width: 100%;*/
+/*position: absolute;*/
+/*bottom: 0;*/
 /*}*/
 /*.s2 .footer img {*/
-    /*position: absolute;*/
-    /*height: 70px;*/
+/*position: absolute;*/
+/*height: 70px;*/
 /*}*/
 
 /*.s2 .footer img:nth-of-type(1) {*/
-    /*left: 0;*/
+/*left: 0;*/
 /*}*/
 
 /*.s2 .footer img:nth-of-type(2) {*/
-    /*left: -95px;*/
+/*left: -95px;*/
 /*}*/
+
+/*
+    s3样式
+*/
+.s3 .main p {
+    width: 140px;
+    height: 140px;
+    font-size: 26px;
+    font-weight: bold;
+    background: radial-gradient(#00001b, #046a79);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 140px;
+    position: absolute;
+    top: 39%;
+    left: 32%;
+}
+
+.s3 .main span {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    background: radial-gradient(#00001b, #046a79);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+}
+
+.s3 .main span:nth-of-type(1) {
+    top: 25%;
+    left: 22%;
+}
+.s3 .main span:nth-of-type(2) {
+    top: 25%;
+    right: 22%;
+}
+
+.s3 .main span:nth-of-type(3) {
+    top: 44%;
+    right: 5%;
+}
+
+.s3 .main span:nth-of-type(4) {
+    bottom: 27%;
+    right: 22%;
+}
+.s3 .main span:nth-of-type(5) {
+    bottom: 27%;
+    left: 22%;
+}
+.s3 .main span:nth-of-type(6) {
+    top: 44%;
+    left: 5%;
+}
+.s3 .text p{
+    width: 80%;
+    font-size: 16px;
+    text-align: left;
+    bottom: 15%;
+    left: 12%;
+    position: absolute;
+    border-left: 2px solid #00f5c8;
+    padding-left:4%;
+}
