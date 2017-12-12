@@ -24,7 +24,7 @@ body {
     right: auto;
     left: 50%;
     margin-left: -13.5px;
-    transform: rotateZ(90deg);
+    transform: rotateZ(-90deg);
 }
 
 /*自定义*/
@@ -76,7 +76,7 @@ body {
     background: #fff;
 }
 
-.s1, .s2, .s3, .s4 {
+.s1, .s2, .s3, .s4, .s5, .s6, .s7 {
     background: url("../img/bj.png");
     height: 100%;
     position: relative;
@@ -175,27 +175,25 @@ body {
     animation: shake infinite;
 }
 
-.s2, .s3, .s4 {
+.s2, .s3, .s4, .s5, .s6, .s7 {
     color: #00f8ca;
 }
 
-.s2 h2, .s3 h2 {
+h2 {
     font-size: 26px;
     position: relative;
     top: 12%;
 }
 
-.s2 small, .s3 small {
+small {
     margin-top: 10px;
     display: block;
     font-size: 14px;
     letter-spacing: 5px;
 }
 
-.s2 h2::before,
-.s2 h2::after,
-.s3 h2::before,
-.s3 h2::after {
+h2::before,
+h2::after {
     content: "";
     width: 80px;
     height: 20px;
@@ -203,14 +201,14 @@ body {
     position: absolute;
 }
 
-.s2 h2::before, .s3 h2::before {
+h2::before {
     background: url(../img/14.png);
     background-size: contain;
     margin-left: -95px;
     margin-top: 10px;
 }
 
-.s2 h2::after, .s3 h2::after {
+h2::after {
     background: url(../img/13.png);
     background-size: contain;
     margin-left: 66px;
@@ -218,7 +216,7 @@ body {
     top: 0;
 }
 
-.s2 div {
+.s2 .main, .s4 .main {
     position: absolute;
     top: 25%;
     width: 80%;
@@ -228,13 +226,13 @@ body {
 
 }
 
-.s2 div img {
+.s2 .main img {
     width: 100%;
     position: absolute;
     left: 0;
 }
 
-.s2 div p {
+.s2 .main p {
     text-align: left;
     padding-left: 10%;
     padding-right: 10%;
@@ -243,11 +241,11 @@ body {
     margin-bottom: 10px;
 }
 
-.s2 div p:nth-of-type(1) {
+.s2 .main p:nth-of-type(1) {
     padding-top: 20px;
 }
 
-.s2 div span {
+.s2 .main span {
     /*渐变色*/
     background: -moz-linear-gradient(left, #00ecfc, #00fd9d); /*Mozilla*/
     background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00ecfc), to(#00fd9d)); /*Old gradient for webkit*/
@@ -353,4 +351,124 @@ body {
     position: absolute;
     border-left: 2px solid #00f5c8;
     padding-left: 4%;
+}
+
+.s4 .main .imgbg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.s4 .header {
+    font-size: 18px;
+}
+
+.s4 .main .header img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 2%;
+}
+
+.s4 .main .header img:nth-of-type(1) {
+    left: 10%;
+}
+
+.s4 .main .header img:nth-of-type(2) {
+    right: 33%;
+}
+
+.s4 .main .header span {
+    line-height: 40px;
+    position: absolute;
+    top: 2%;
+    padding-bottom: 10px;
+}
+
+.s4 .main .header span:nth-of-type(1) {
+    left: 23%;
+    color: #2af4a8;
+}
+
+.s4 .main .header span:nth-of-type(2) {
+    right: 15%;
+    color: #02c0ff;
+}
+
+.s4 .center{
+    position: absolute;
+    top: 10%;
+    text-align: left;
+}
+.s4 .center div span{
+    color: #fff;
+}
+
+.s4 .center div .p1 img{
+    width: 15px;
+    height: 25px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.s4 .center .p2 img ,.s4 .center .p3 img{
+    height: 15px;
+    margin-top: 5px;
+}
+
+.s4 .center .p3 {
+    color: #00baff;
+}
+.s4 .p4{
+    position: absolute;
+    bottom: 5%;
+    width: 94%;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.s5 div{
+    background: url("../img/p5.png");
+    background-size:contain;
+    width: 38%;
+    height: 27%;
+    position: absolute;
+}
+
+.s5 div:nth-of-type(1){
+    top: 25%;
+    left: 10%;
+}
+.s5 div:nth-of-type(2){
+    top: 25%;
+    right: 10%;
+}
+.s5 div:nth-of-type(3){
+    bottom: 16%;
+    left: 10%;
+}
+.s5 div:nth-of-type(4){
+    bottom: 16%;
+    right: 10%;
+}
+.s5 div img{
+    width: 80%;
+}
+.s5 div p{
+    font-size: 14px;
+}
+.s5 div span{
+    background: -moz-linear-gradient(left, #00ecfc, #00fd9d); /*Mozilla*/
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00ecfc), to(#00fd9d)); /*Old gradient for webkit*/
+    background: -webkit-linear-gradient(left, #00ecfc, #00fd9d); /*new gradient for Webkit*/
+    background: -o-linear-gradient(left, #00ecfc, #00fd9d); /*Opera11*/
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+    display: inline-block;
+    margin-top: 10px;
 }
