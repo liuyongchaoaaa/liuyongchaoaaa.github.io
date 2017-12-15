@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+#mp3Btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 4px solid #292929;
+    text-align: center;
+    line-height: 27px;
+    cursor: pointer;
+    transform: rotateZ(0deg);
+    animation: mp3key 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes mp3key {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#mp3Btn img {
+    width: 10px;
+}
+.swiper-button-next {
+    top: auto;
+    bottom: 2%;
+    right: auto;
+    left: 50%;
+    margin-left: -13.5px;
+    transform: rotateZ(-90deg);
+    width: 17px;
+    height: 35px;
+    background-size: contain;
+    animation: buttonnext 2s infinite;
+}
+
+@keyframes buttonnext {
+    0% {
+        bottom: 2%;
+        opacity: 1;
+    }
+    100% {
+        bottom: 5%;
+        opacity: 0;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+/*
+
+
+
+
+    p1样式
+
+
+
+
+*/
+.p1 {
+    background: url("../img/bg.jpg");
+    height: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.p1 .main img {
+    position: absolute;
+    width: 33%;
+}
+
+.p1 .main img:nth-of-type(1) {
+    top: 10%;
+    left: 30%;
+}
+
+.p1 .main img:nth-of-type(2) {
+    top: 32%;
+    left: 40%;
+}
+
+.p1 .main img:nth-of-type(3) {
+    top: 55%;
+    right: 20%;
+}
+
+.p1 .text img {
+    position: absolute;
+    width: 15%;
+}
+
+.p1 .text img:nth-of-type(1) {
+    bottom: 45%;
+    left: 10%;
+}
+
+.p1 .text img:nth-of-type(2) {
+    bottom: 33%;
+    left: 7%;
+}
+
+.p1 .text img:nth-of-type(3) {
+    bottom: 20%;
+    left: 10%;
+}
+
+.p1 .text img:nth-of-type(4) {
+    bottom: 8%;
+    left: 7%;
+}
+
+/*
+
+
+
+
+
+    p2样式
+
+
+
+
+
+*/
+.p2, .p3, .p4 ,.p5{
+    background: url("../img/p2bg.jpg");
+    height: 100%;
+    position: relative;
+}
+
+.p2 img, .p3 img, .p4 img ,.p5 img{
+    position: absolute;
+    width: 75%;
+    left: 0%;
+}
+
+.p2 .main, .p3 .main, .p4 .main {
+    position: absolute;
+    color: #ffffff;
+    width: 86%;
+    top: 15%;
+    left: 8%;
+}
+
+.p2 .main p {
+    margin-top: 15px;
+    line-height: 1.4em;
+}
+
+.p2 .main p:nth-last-child(1) {
+    color: #948585;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+}
+
+/*
+
+
+
+    p3样式
+
+
+
+*/
+
+.p3 p {
+    font-size: 18px;
+    line-height: 1.8em;
+    text-align: left;
+}
+
+.p3 p:nth-of-type(1) {
+    font-weight: bolder;
+    font-size: 22px;
+    margin-top: 10%;
+}
+
+.p3 p:nth-of-type(2) {
+    margin-top: 5%;
+}
+
+.p3 p:nth-of-type(3) {
+    margin-top: 5%;
+}
+
+.p3 span {
+    color: #948585;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 15%;
+}
+
+/*
+
+
+    p4样式
+
+
+*/
+.p4 h2{
+    margin-bottom:15%;
+}
+.p4 p{
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.5em;
+    margin-top: 5%;
+}
+.p4 .main span{
+    margin-left: 35%;
+}
+.p4 .span{
+    color: #948585;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 15%;
+}
+.p5 span{
+    color:#fff;
+    font-size: 100px;
+    font-family: 方正行楷简体;
+    position: absolute;
+    animation: tada 2s infinite;
+}
+.p5 span:nth-of-type(1){
+    top:15%;
+    left: 15%;
+}
+.p5 span:nth-of-type(2){
+    top:25%;
+}
+.p5 span:nth-of-type(3){
+    top:40%;
+    left: 15%;
+}
+.p5 span:nth-of-type(4){
+    top:55%;
+}
+.p5 span:nth-of-type(5){
+    top: 70%;
+    left: 15%;
+}
+.p5 span:nth-of-type(6){
+    top:80%;
+}
+h2{
+    animation: swing 2s infinite;
+}
